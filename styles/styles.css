@@ -241,7 +241,7 @@ h1:hover, h2:hover, h3:hover {
 .bio p {
     text-align: justify;
     margin-right: 5vw;
-    font-size: 0.8rem;
+    font-size: 2.5vh;
 }
 
 /*------------------ CV -----------------*/
@@ -270,7 +270,7 @@ h1:hover, h2:hover, h3:hover {
     margin-right: 5px;
     position: relative; /* Posición relativa */
     left: 0; /* Alineado a la izquierda del elemento */
-    color: #000000; /* Color de la viñeta */
+    color: #ffffff; /* Color de la viñeta */
 }
 
 /* Estilo para la viñeta */
@@ -279,7 +279,7 @@ h1:hover, h2:hover, h3:hover {
     margin-right: 5px;
     position: relative; /* Posición relativa */
     left: 0; /* Alineado a la izquierda del elemento */
-    color: #000000; /* Color de la viñeta */
+    color: #ffffff; /* Color de la viñeta */
 }
 
 #cv h1 {
@@ -348,7 +348,8 @@ h1:hover, h2:hover, h3:hover {
 }
 
 .cv-column h2 {
-    font-size: large; /* Tamaño del título */
+    font-family: 'myfont2','Courier New', Courier, monospace;
+    font-size: x-large; /* Tamaño del título */
     color: #ffffff; /* Color del título */
 }
 
@@ -360,18 +361,19 @@ h1:hover, h2:hover, h3:hover {
 .cv-column ul li {
     margin-bottom: 10px; /* Espaciado entre elementos de la lista */
     color: #ffffff; /* Color del texto de la lista */
-    font-size: small;
+    font-size: normal;
 }
 
 .cv-column h4 {
     margin-bottom: 5px; /* Espaciado inferior para títulos secundarios */
-    font-size: small; /* Tamaño del título secundario */
+    font-size: large; /* Tamaño del título secundario */
     color: #ffffff; /* Color del título secundario */
+    font-weight: normal;
 }
 
 .cv-column p {
     margin-bottom: 10px; /* Espaciado inferior para párrafos */
-    font-size: small; /* Tamaño del texto del párrafo */
+    font-size: normal; /* Tamaño del texto del párrafo */
     color: #ffffff; /* Color del texto del párrafo */
 }
 
@@ -404,6 +406,7 @@ h1:hover, h2:hover, h3:hover {
     margin-right: 50px;
     margin-top: 10px;
     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.15);;
+    padding: 5%;
 }
 .cv-item h2 {
     text-align: center;
