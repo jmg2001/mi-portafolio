@@ -236,6 +236,7 @@ h1:hover, h2:hover, h3:hover {
 
 .bio {
     flex: 1;
+    width: 60vw;
 }
 
 .bio p {
@@ -435,7 +436,6 @@ h1:hover, h2:hover, h3:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    z-index: 999;
 }
 
 #projects .circle {
@@ -447,7 +447,7 @@ h1:hover, h2:hover, h3:hover {
 }
 
 #projects {
-    padding: 2%;
+    padding: 3%;
 }
 
 #projects .title-container {
@@ -506,7 +506,7 @@ h1:hover, h2:hover, h3:hover {
     border: none;
     padding: 10px 20px;
     margin: 0 5px;
-    font-size: 2vw;
+    font-size: 2.5vh;
     cursor: pointer;
     transition: background-color 0.3s ease;
     border-radius: 20px;
@@ -534,7 +534,7 @@ h1:hover, h2:hover, h3:hover {
 }
 
 .projects h2 {
-    font-size: 2vw;
+    font-size: 3vh;
     color: #ffffff;
     background-color:#2b4c7e;
     border-radius: 10px;
@@ -563,7 +563,7 @@ h1:hover, h2:hover, h3:hover {
 #contact .shapes {
     position: absolute;
     top: 0;
-    left: 50vw;
+    left: -50vw;
     width: 100%;
     height: 100%;
     display: flex;
@@ -601,7 +601,7 @@ h1:hover, h2:hover, h3:hover {
     display: flex;
     background-color:#285eac;
     padding: 20px;
-    font-size: 1vw;
+    font-size: 2vh;
     border-radius: 10px;
     font-family:'Consolas','Courier New', Courier, monospace;
     font-weight: bold;
@@ -631,9 +631,9 @@ h1:hover, h2:hover, h3:hover {
 
 .form-group input,
 .form-group textarea {
-    height: 20px;
+    height: 5vh;
     width: 100%;
-    padding: 10px;
+    padding: 0px;
     border: none;
     border-radius: 5px;
 }
