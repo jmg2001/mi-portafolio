@@ -44,6 +44,7 @@
 
 /*------------------ NavBar -----------------*/
 
+/* CSS existente */
 .navbar {
     position: fixed;
     top: 0;
@@ -53,6 +54,17 @@
     padding: 20px 0;
     z-index: 998;
     transition: top 0.3s;
+}
+
+.navbar button {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: #000000;
+    border-style:solid;
+}
+
+.navbar button:hover {
+    background-color: #dce0e6;
 }
 
 .navbar ul {
@@ -79,12 +91,28 @@
     background-color: #3474c7;
 }
 
+.navbar-menu.active {
+    display: block;
+    animation: slideDown 0.5s ease;
+}
+
 .navbar.hidden {
     top: -100px;
 }
 
 .navbar-toggler {
     display: none;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @media (max-width: 768px) {
@@ -99,14 +127,42 @@
         padding: 10px;
         cursor: pointer;
     }
-    
-    .navbar-menu.active {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        top: 60px;
+    .navbar-menu {
+        display: none;
     }
 }
+
+/* Estilos para bubble-menu */
+.bubble-menu {
+    position: fixed;
+    top: 80px; /* Ajusta la posición según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    z-index: 999;
+}
+
+.bubble-menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bubble-menu a {
+    display: block;
+    background-color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #1f1f1f;
+    transition: transform 0.3s ease;
+}
+
+.bubble-menu a:hover {
+    transform: scale(1.1);
+}
+
 
 /*------------------ Icons -----------------*/
 /* Estilo para el contenido */
@@ -581,7 +637,7 @@ h1:hover, h2:hover, h3:hover {
 
 #contact {
     padding: 2%;
-    height: 120vh;
+    height: 95vh;
 }
 
 #contact .content {

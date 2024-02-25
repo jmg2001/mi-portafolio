@@ -1,3 +1,4 @@
+/*------------------ Funcion para filtrar los proyectos -----------------*/
 function filterProjects(category) {
     const projects = document.querySelectorAll('.project');
     projects.forEach(project => {
@@ -9,7 +10,7 @@ function filterProjects(category) {
     });
 }   
 
-
+/*------------------ Ocultamos el contenido si no se esta viendo -----------------*/
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('.section');
 
@@ -33,21 +34,25 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+/*------------------ Ocultar la barra de navegación si scrolleamos hacia abajo -----------------*/
 let lastScrollTop = 0;
 let isNavbarHidden = false;
 
 window.addEventListener('scroll', function() {
     let navbar = document.getElementById('navbar');
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScroll > lastScrollTop && !isNavbarHidden) {
-        // Desplazamiento hacia abajo y la barra de navegación no está oculta
-        navbar.classList.add('hidden');
-        isNavbarHidden = true;
-    } else if (currentScroll <= lastScrollTop && isNavbarHidden) {
-        // Desplazamiento hacia arriba y la barra de navegación está oculta
-        navbar.classList.remove('hidden');
-        isNavbarHidden = false;
+    var windowWidth = window.innerWidth;
+    
+    if (windowWidth > 768){
+        if (currentScroll > lastScrollTop && !isNavbarHidden) {
+            // Desplazamiento hacia abajo y la barra de navegación no está oculta
+            navbar.classList.add('hidden');
+            isNavbarHidden = true;
+        } else if (currentScroll <= lastScrollTop && isNavbarHidden) {
+            // Desplazamiento hacia arriba y la barra de navegación está oculta
+            navbar.classList.remove('hidden');
+            isNavbarHidden = false;
+        }
     }
 
     lastScrollTop = currentScroll;
@@ -67,6 +72,7 @@ document.addEventListener('mousemove', function(event) {
 });
 
 
+/*------------------ Cramos la animación de scroll cuando se selecciona algun elemento de la navbar -----------------*/
 document.addEventListener('DOMContentLoaded', function() {
     // Seleccionamos todos los enlaces de la barra de navegación
     const navLinks = document.querySelectorAll('.navbar ul li a');
@@ -90,4 +96,36 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+});
+
+function toggleNav() {
+    var bubbleMenu = document.querySelector('.bubble-menu');
+    bubbleMenu.classList.toggle('active');
+    navbar.classList.add('hidden');
+}
+
+
+/*------------------ Ocultar la barra negra de la navbar -----------------*/
+
+
+window.addEventListener('resize', function() {
+    // Obtener el ancho de la ventana
+    var windowWidth = window.innerWidth;
+    let navbar = document.getElementById('navbar');
+
+    // Comprobar si la ventana se ha hecho lo suficientemente pequeña
+    if (windowWidth <= 768) {
+        // Realizar las modificaciones necesarias para pantallas pequeñas
+        navbar.classList.add('hidden');
+    }else {
+        navbar.classList.remove('hidden');
+    }
+});
+
+window.addEventListener('load', function() {
+    var initialWidth = window.innerWidth;
+    if (initialWidth <= 768) {
+        // Realizar las modificaciones necesarias para pantallas pequeñas
+        navbar.classList.add('hidden');
+    }
 });
