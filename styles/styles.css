@@ -1,0 +1,669 @@
+/* Paleta de colores */
+.color1 { color: #1f1f20; }
+.color2 { color: #2b4c7e; }
+.color3 { color: #567ebb; }
+.color4 { color: #606d80; }
+.color5 { color: #dce0e6; }
+
+@font-face {
+    font-family: 'myfont';
+    src: url('../fonts/Lemon Days.otf') format('truetype'),
+         url('../fonts/Lemon Days.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'myfont2';
+    src: url('../fonts/coolvetica rg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*------------------ Scroll -----------------*/
+/* Estilos para el scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Estilos para la barra del scrollbar */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para el thumb del scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+/* Cambiar el color del thumb del scrollbar cuando se pasa el mouse por encima */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/*------------------ NavBar -----------------*/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f1f1f;
+    padding: 20px 0;
+    z-index: 998;
+    transition: top 0.3s;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.navbar ul li a:hover {
+    background-color: #3474c7;
+}
+
+.navbar.hidden {
+    top: -100px;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 998;
+        background-color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    .navbar-menu.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        top: 60px;
+    }
+}
+
+/*------------------ Icons -----------------*/
+/* Estilo para el contenido */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    vertical-align: middle;
+}
+
+/*------------------ Generals -----------------*/
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'myfont2','Courier New', Courier, monospace;
+}
+
+
+h1, h2, h3{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Agregando sombra al texto */
+    font-weight: normal; /* Haciendo la fuente más negrita */
+    font-family: 'myfont','Courier New', Courier, monospace; /* Cambiando la fuente */
+    transition: all 0.3s ease; /* Agregando una transición suave */
+}
+
+h1:hover, h2:hover, h3:hover {
+    color: #2b4c7e; /* Cambiando el color al pasar el mouse */
+    transform: scale(1.05); /* Agrandando ligeramente el texto al pasar el mouse */
+}
+
+.section {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.section:nth-child(odd) {
+    background-color:#3474c7;
+}
+
+.section:nth-child(even) {
+    background-color: #dce0e6;
+}
+
+.content {
+    flex-wrap: wrap;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.content.show {
+    flex-wrap: wrap;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.title-container {
+    text-align: center;
+    
+}
+
+.title-container h1 {
+    font-size: 6vw;
+    color: #2b4c7e;
+}
+
+
+/*------------------ About me -----------------*/
+
+#about {
+    display: flex;
+    color: #dce0e6;
+}
+
+#about h1 {
+    font-size: 6vw;
+}
+
+#about h1:hover {
+    color: #ffffff;
+}
+
+#about .shapes{
+    position: absolute;
+    top: 0;
+    left: -50vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#about .circle {
+    width: 100vw;
+    height: 180%;
+    border-radius: 50%;
+    background-color: #2b4c7e; /* Color del círculo */
+    opacity: 0.2; /* Opacidad del círculo */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-picture {
+    flex: 0 0 auto;
+    margin-right: 2vw;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    max-width: 30vw;
+}
+
+.bio {
+    flex: 1;
+}
+
+.bio p {
+    text-align: justify;
+    margin-right: 5vw;
+    font-size: 0.8rem;
+}
+
+/*------------------ CV -----------------*/
+#cv .shapes {
+    position: absolute;
+    top: 0;
+    left: 50vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#cv .circle {
+    width: 100%;
+    height: 160%;
+    border-radius: 50%;
+    background-color: #2b4c7e; /* Color del círculo */
+    opacity: 0.2; /* Opacidad del círculo */
+}
+
+/* Estilo para la viñeta */
+.cv-column h4::before {
+    content: "\2022"; /* Código de la viñeta */
+    margin-right: 5px;
+    position: relative; /* Posición relativa */
+    left: 0; /* Alineado a la izquierda del elemento */
+    color: #000000; /* Color de la viñeta */
+}
+
+/* Estilo para la viñeta */
+.cv-column li::before {
+    content: "\2011"; /* Código de la viñeta */
+    margin-right: 5px;
+    position: relative; /* Posición relativa */
+    left: 0; /* Alineado a la izquierda del elemento */
+    color: #000000; /* Color de la viñeta */
+}
+
+#cv h1 {
+    color: #2b4c7e;
+    text-align: center;
+    margin-top: 0; /* Para eliminar cualquier margen superior predeterminado */
+    display: block;
+    font-size: 6vw;
+    margin-bottom: 0px;
+}
+
+#cv h1:hover {
+    transform: scale(1.05);
+}
+
+#cv .content {
+    display: flex; /* Esto activa la distribución en dos columnas */
+}
+
+/* Estilo para la sección del CV */
+#cv {
+    padding: 2%; /* Espaciado interno */
+    height: 150vh;    
+}
+
+/* Media query para dispositivos de pantalla más pequeña */
+@media screen and (max-width: 768px) {
+    #cv {
+        height: 240vh; /* Cambiar el ancho de las columnas al 50% en dispositivos más pequeños */
+    }
+}
+
+/* Media query para dispositivos de pantalla aún más pequeña */
+@media screen and (max-width: 480px) {
+    #cv {
+        height: 380vh; /* Cambiar el ancho de las columnas al 100% en dispositivos muy pequeños para que se muestren una debajo de la otra */
+    }
+}
+
+#cv .content.show {
+    height: 110vh;
+}
+
+.cv-column {
+    height: 110vh;
+    flex: 0% 0% 25%; /* Ancho de la columna */
+    margin-left: 15vh;
+    flex-wrap: wrap;
+    width: calc(33.33% - 20px); /* Ancho inicial de cada columna */
+    /* margin-bottom: 200px; Espacio entre columnas */
+    margin: 0 10px; /* Ajusta el margen según tu diseño */
+}
+
+/* Media query para dispositivos de pantalla más pequeña */
+@media screen and (max-width: 768px) {
+    .cv-column {
+        width: calc(50% - 20px); /* Cambiar el ancho de las columnas al 50% en dispositivos más pequeños */
+    }
+}
+
+/* Media query para dispositivos de pantalla aún más pequeña */
+@media screen and (max-width: 480px) {
+    .cv-column {
+        width: 100%; /* Cambiar el ancho de las columnas al 100% en dispositivos muy pequeños para que se muestren una debajo de la otra */
+    }
+}
+
+.cv-column h2 {
+    font-size: large; /* Tamaño del título */
+    color: #ffffff; /* Color del título */
+}
+
+.cv-column ul {
+    padding: 0; /* Eliminar el relleno de la lista */
+    list-style-type: none; /* Eliminar los marcadores de lista */
+}
+
+.cv-column ul li {
+    margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+    color: #ffffff; /* Color del texto de la lista */
+    font-size: small;
+}
+
+.cv-column h4 {
+    margin-bottom: 5px; /* Espaciado inferior para títulos secundarios */
+    font-size: small; /* Tamaño del título secundario */
+    color: #ffffff; /* Color del título secundario */
+}
+
+.cv-column p {
+    margin-bottom: 10px; /* Espaciado inferior para párrafos */
+    font-size: small; /* Tamaño del texto del párrafo */
+    color: #ffffff; /* Color del texto del párrafo */
+}
+
+#cv .button {
+    height: 20px;
+    margin: 100px auto 0; /* Centrar horizontalmente */
+    background-color: #3474c7; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    text-decoration: none; /* Quitar subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    align-items: center;
+}
+
+#cv .button:hover {
+    background-color: #285eac; /* Cambio de color de fondo al pasar el ratón */
+}
+
+.cv-item {
+    flex-wrap: wrap;
+    width: 80%;
+    background-color:#3474c7; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10%; /* Espaciado interno */
+    margin-bottom: 20px; /* Espaciado inferior entre elementos */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+    transition: all 0.3s ease; /* Agregando una transición suave */
+    text-align: left;
+    margin-right: 50px;
+    margin-top: 10px;
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.15);;
+}
+.cv-item h2 {
+    text-align: center;
+}
+
+.cv-item:hover {
+    background-color:#2b4c7e; /* Color de fondo al pasar el mouse */
+    transform: scale(1.05);
+}
+
+.title-container {
+    text-align: center; /* Alinea el título al centro */
+    margin-bottom: 20px; /* Espaciado inferior para separar el título del contenido */
+}
+
+
+
+
+/*------------------ Projects -----------------*/
+#projects .shapes {
+    position: absolute;
+    top: 0;
+    left: -50vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+}
+
+#projects .circle {
+    width: 100%;
+    height: 160%;
+    border-radius: 50%;
+    background-color: #2b4c7e; /* Color del círculo */
+    opacity: 0.2; /* Opacidad del círculo */
+}
+
+#projects {
+    padding: 2%;
+}
+
+#projects .title-container {
+    margin-top: 10px;
+}
+
+#projects .title-container h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0; /* Para eliminar cualquier margen superior predeterminado */
+    display: block;
+    font-size: 6vw;
+    margin: 0;
+}
+
+#projects-title h1:hover {
+    color: #ffffff;
+}
+
+.projects-column {
+    margin-top: 70px;
+    height: 50vh;
+}
+
+/* Media query para dispositivos de pantalla más pequeña */
+@media screen and (max-width: 768px) {
+    #projects-title {
+        right: 0px;
+        height: 10vh; /* Cambiar el ancho de las columnas al 50% en dispositivos más pequeños */
+    }
+}
+
+/* Media query para dispositivos de pantalla aún más pequeña */
+@media screen and (max-width: 480px) {
+    #projects-title {
+        height: 10vh; /* Cambiar el ancho de las columnas al 100% en dispositivos muy pequeños para que se muestren una debajo de la otra */
+    }
+}
+
+#projects .content.show {
+    display: flex;
+    padding: 0;
+    align-items: center;
+}
+
+.project-navigation {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.project-navigation button {
+    background-color:#dce0e6; /* Color3 */
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 2vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    color:#285eac;
+    font-family: 'myfont','Courier New', Courier, monospace;
+}
+
+.projects-column {
+    margin-right: 50px;
+}
+
+.projects-column h1 {
+    text-align: left;
+    margin-top: 250px;
+}
+
+.project-navigation button:hover {
+    background-color:#ffffff; /* Color2 */
+    
+}
+
+.projects {
+    align-items: center;
+    text-align: left;
+}
+
+.projects h2 {
+    font-size: 2vw;
+    color: #ffffff;
+    background-color:#2b4c7e;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.projects a.button {
+    color: #285eac;
+    font-family: 'myfont','Courier New', Courier, monospace;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.projects a.button:hover {
+    transform: scale(1.05);
+    background-color: #ffffff;
+}
+
+#projects .content {
+    display: flex;
+}
+
+/*------------------ Contact -----------------*/
+#contact .shapes {
+    position: absolute;
+    top: 0;
+    left: 50vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#contact .circle {
+    width: 100%;
+    height: 160%;
+    border-radius: 50%;
+    background-color: #2b4c7e; /* Color del círculo */
+    opacity: 0.2; /* Opacidad del círculo */
+}
+
+#contact {
+    padding: 2%;
+    height: 120vh;
+}
+
+#contact .content {
+    display: flex;
+    justify-content: center;   
+}
+
+#contact h1 {
+    color: #285eac;
+    font-size: 6vw;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+}
+
+.contact-form {
+    width: 60%;
+    display: flex;
+    background-color:#285eac;
+    padding: 20px;
+    font-size: 1vw;
+    border-radius: 10px;
+    font-family:'Consolas','Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: left;
+}
+
+#contact-form {
+    width: 95%;
+}
+
+.contact-form h2 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    padding: 1%;
+    width: 100%;
+}
+
+.form-group label {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    height: 20px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+height: 100px;
+}
+
+button[type="submit"] {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #dce0e6;
+}
+  
+.icons {
+    margin-top: 50px;
+}
+
+.contact-data {
+    margin-right: 30px;
+}
+
+/*-------------------------------- DIVISION ------------------------------*/
+
+
+
