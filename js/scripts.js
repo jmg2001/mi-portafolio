@@ -76,13 +76,15 @@ document.addEventListener('mousemove', function(event) {
 document.addEventListener('DOMContentLoaded', function() {
     // Seleccionamos todos los enlaces de la barra de navegación
     const navLinks = document.querySelectorAll('.navbar ul li a');
+    let navbar = document.getElementById('navbar');
 
     // Iteramos sobre cada enlace y agregamos un eventListener para el clic
     navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             // Evitamos el comportamiento predeterminado del enlace (salto brusco a la sección)
             event.preventDefault();
-            
+            navbar.classList.add('hidden');
+            isNavbarHidden = true;
             // Obtenemos el valor del atributo href del enlace (el ID de la sección a la que nos queremos desplazar)
             const targetId = link.getAttribute('href');
 
