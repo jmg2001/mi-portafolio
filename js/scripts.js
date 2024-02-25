@@ -98,6 +98,44 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleccionamos todos los enlaces de la barra de navegación
+    const navLinks2 = document.querySelectorAll('.bubble-menu a');
+
+    // Iteramos sobre cada enlace y agregamos un eventListener para el clic
+    navLinks2.forEach(link => {
+        link.addEventListener('click', function(event) {
+            // Evitamos el comportamiento predeterminado del enlace (salto brusco a la sección)
+            event.preventDefault();
+            
+            // Obtenemos el valor del atributo href del enlace (el ID de la sección a la que nos queremos desplazar)
+            const targetId = link.getAttribute('href');
+
+            // Obtenemos la posición vertical de la sección a la que nos queremos desplazar
+            const targetPosition = document.querySelector(targetId).offsetTop;
+
+            // Realizamos el desplazamiento suave utilizando la función scrollTo
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth' // Animación suave
+            });
+        });
+    });
+
+    /*------------------ Ocultar bubble menu al seleccionar algo -----------------*/
+    var menuItems = document.querySelectorAll('.bubble-menu  a');
+    // Iterar sobre cada elemento del menú y agregar un controlador de eventos clic
+    menuItems.forEach(function(item) {
+        // Obtener todos los elementos del menú
+        item.addEventListener('click', function() {
+            // Ocultar el menú al hacer clic en una opción del menú
+            var menu = document.querySelector('.bubble-menu.active');
+            menu.classList.remove('active');
+        });
+    });
+});
+
+/*------------------ Mostrar el bubble menu -----------------*/
 function toggleNav() {
     var bubbleMenu = document.querySelector('.bubble-menu');
     bubbleMenu.classList.toggle('active');
@@ -129,3 +167,4 @@ window.addEventListener('load', function() {
         navbar.classList.add('hidden');
     }
 });
+
