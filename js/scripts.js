@@ -1,3 +1,20 @@
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 3,
+    mousewheel:true,
+    coverflowEffect: {
+        infinite:false,
+        rotate:15,
+        strech:0,
+        depth:200,
+        modifier:1,
+        slideShadow:true,
+    },
+    loop:true,
+});
+
 /*------------------ Funcion para filtrar los proyectos -----------------*/
 function filterProjects(category) {
     const projects = document.querySelectorAll('.projects');
@@ -13,7 +30,10 @@ function filterProjects(category) {
             }
             project.style.display = 'none';
         }
+        swiper.updateSlides();
     });
+    swiper.update();
+    
 }   
 
 /*------------------ Ocultamos el contenido si no se esta viendo -----------------*/
@@ -176,24 +196,8 @@ window.addEventListener('load', function() {
     }
 });
 
-var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 3,
-    coverflowEffect: {
-        infinite:false,
-        rotate:15,
-        strech:0,
-        depth:200,
-        modifier:1,
-        slideShadow:true,
-    },
-    loop:true,
-});
-
 function togglePopup() {
     var popup = document.getElementById("popup");
     popup.style.display = popup.style.display === "none" ? "block" : "none";
-  }
+}
   
