@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jesus Martinez Garcia - Portafolio</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="js/scripts.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
@@ -163,29 +166,83 @@
                 <!-- Agrega más botones para otras categorías -->
             </div>
             <div class="content">
-                <div class="projects">
-                    <div class="project data-science" id="project">
-                        <h2>Proyecto 1 de Aprendizaje Automático</h2>
-                        <p>Descripción del Proyecto 1.</p>
-                        <!-- <a href="#" class="button">Ver mas</a> -->
-                    </div>
-                    <div class="project escolares">
-                        <h2>BarMan</h2>
-                        <div id="project">
-                            <img src="images/barman.png" alt="barman" class="barman-img">
-                            <p>El proyecto tuvo como objetivos generales la creación de un sistema automatizado 
-                                que sea capaz de servir bebidas preestablecidas de manera intuitiva para el usuario, 
-                                ahorrar tiempo y esfuerzo en comparación con un barman real y ser de bajo costo. 
-                                Se realizó con Arduino y puentes H para controlar las bombas.</p>
-                            <!-- <a href="#" class="button">Ver mas</a> -->
+                <div class="movies container">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper"> 
+                            <div class="swiper-slide projects escolares">
+                                <h3>Barman</h3>
+                                <img src="images/barman.png" alt="Imagen" class="image">
+                                <button class="button" onclick="togglePopup()">Mostrar Detalles</button>
+                                <div class="popup" id="popup">
+                                    <div class="popup-content">
+                                        <span class="close" onclick="togglePopup()">&times;</span>
+                                        <h2>Detalles</h2>
+                                        <p>Aquí va tu texto detallado.</p>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="swiper-slide projects escolares">
+                                <h3>Barman</h3>
+                                <img src="images/barman.png" alt="">
+                            </div>
+            
+                            <div class="swiper-slide projects laborales">
+                                <h3>Barman</h3>
+                                <img src="images/barman.png" alt="">
+                            </div>
+            
+                            <div class="swiper-slide projects data-science">
+                                <h3>Barman</h3>
+                                <img src="images/barman.png" alt="">
+                            </div>
+            
+                            <div class="swiper-slide projects data-science">
+                                <h3>Barman</h3>
+                                <img src="images/barman.png" alt="">
+                            </div>
+            
+                            <div class="swiper-slide projects escolares">
+                                <h3>Barman</h3>
+                                <img src="images/barman.png" alt="">
+                            </div>
+            
+                            <div class="swiper-slide">
+                                <h3>Barman</h3>
+                                <img src="images/barman.png" alt="">
+                            </div>
+            
+                            <div class="swiper-slide">
+                                <h3>Barman</h3>
+                                <img src="images/barman.png" alt="">
+                            </div>
+            
+                            <div class="swiper-slide">
+                                <h3>Barman</h3>
+                                <img src="images/barman.png" alt="">
+                            </div>
+            
+                            <div class="swiper-slide">
+                                <h3>Barman</h3>
+                                <img src="images/barman.png" alt="">
+                            </div>
+            
+                            <div class="swiper-slide">
+                                <h3>Barman</h3>
+                                <img src="images/barman.png" alt="">
+                            </div>
+            
+                            <div class="swiper-slide">
+                                <h3>Barman</h3>
+                                <img src="images/barman.png" alt="">
+                            </div>
+            
+                            <div class="swiper-slide">
+                                <h3>Barman</h3>
+                                <img src="images/barman.png" alt="">
+                            </div>
                         </div>
                     </div>
-                    <div class="project laborales" id="project">
-                        <h2>Proyecto 3 de Laborales</h2>
-                        <p>Descripción del Proyecto 3.</p>
-                        <!-- <a href="#" class="button">Ver mas</a> -->
-                    </div>
-                    <!-- Agrega más proyectos aquí -->
                 </div>
             </div>
         </section>
@@ -214,24 +271,21 @@
                       <button type="submit">Enviar</button>
                     </form>
                   </div>
-                    <div class="icons">
-                        
-                        
-                        
-                        
-                        <!-- Agregar más iconos según sea necesario -->
-                    </div>
             </div>
         </section>
+
     </div>
+
     <footer class="footer">
         <div class="contact-info">
             <p><span class="material-symbols-outlined">phone</span>  <a href="callto:2711169848" class="contact-data" target="_blank">271 - 1169848</a> </p>
             <p><span class="material-symbols-outlined">mail</span>  <a href="mailto:jmg357159@gmail.com" class="contact-data" target="_blank">jmg357159@gmail.com</a></p>
             <p><span class="material-symbols-outlined">location_on</span>  <a href="https://maps.app.goo.gl/Tza6yLRxwjewHRqk9" target="_blank">Colonia Cuahutémoc, San Nicolás de los Garza, Nuevo León</a></p>
-            <p><a href="https://www.linkedin.com/in/jesus-martinez-garcia-20011991837d/" target="_blank">LinkedIn</a></p>
+            <p><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/jesus-martinez-garcia-20011991837d/" target="_blank">LinkedIn</a></p>
         </div>
     </footer>
     
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

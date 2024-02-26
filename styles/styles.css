@@ -619,24 +619,76 @@ h1:hover, h2:hover, h3:hover {
 }
 
 /*-------------------------------- Projects Images ------------------------------*/
-#project {
-    display: flex;
-    font-size: small;
+
+.movies.container {
+    width: 100%;
+    margin: 0px auto 0px;
 }
 
-.barman-img {
-    flex: 0 0 auto;
-    height: 10%;
-    width: 20%;
-    margin-right: 1vw;
+.movies {
+    padding: 0;
 }
 
-.barman-img img {
-    border-radius: 50%;
-    max-width: 30vw;
-    
+.swiper {
+    width: 100%;
 }
 
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 5vw;
+}
+
+.swiper-slide img{
+    display: block;
+    width: 100%;
+}
+
+.swiper-slide h3 {
+    color: #2b4c7e;
+    font-family: 'myfont2','Courier New', Courier, monospace;
+    margin: 2%;
+    background-color: #dce0e6;
+    padding: 0;
+    border-radius: 5px;
+    font-size: x-large;
+    text-align: center;
+    justify-content: center;
+}
+
+/*------------------ Button over image -----------------*/
+
+.swiper-slide.button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+  
 
 /*------------------ Contact -----------------*/
 #contact .shapes {
