@@ -12,7 +12,7 @@ var swiper = new Swiper(".mySwiper", {
         modifier:1,
         slideShadow:true,
     },
-    loop:true,
+
 });
 
 /*------------------ Funcion para filtrar los proyectos -----------------*/
@@ -196,8 +196,10 @@ window.addEventListener('load', function() {
     }
 });
 
-function togglePopup() {
-    var popup = document.getElementById("popup");
+/*------------------ Activar el popup de los proyectos -----------------*/
+function togglePopup(id) {
+    var slide = document.getElementById(id);
+    var popup = slide.querySelector(".popup");
     popup.style.display = popup.style.display === "none" ? "block" : "none";
 }
   
