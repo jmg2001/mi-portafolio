@@ -564,7 +564,7 @@ h1:hover, h2:hover, h3:hover {
     background-color:#dce0e6; /* Color3 */
     border: none;
     padding: 10px 20px;
-    margin: 0 5px;
+    margin: 10px 5px;
     font-size: 2.5vh;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -618,6 +618,26 @@ h1:hover, h2:hover, h3:hover {
     display: flex;
 }
 
+/*-------------------------------- Projects Images ------------------------------*/
+#project {
+    display: flex;
+    font-size: small;
+}
+
+.barman-img {
+    flex: 0 0 auto;
+    height: 10%;
+    width: 20%;
+    margin-right: 1vw;
+}
+
+.barman-img img {
+    border-radius: 50%;
+    max-width: 30vw;
+    
+}
+
+
 /*------------------ Contact -----------------*/
 #contact .shapes {
     position: absolute;
@@ -657,7 +677,7 @@ h1:hover, h2:hover, h3:hover {
 
 #contact h3 {
     color: #285eac;
-    font-size: 1.5vw;
+    font-size: normal;
     font-family: 'myfont2','Courier New', Courier, monospace;
     text-align: center;
     margin: 0px 0px 20px 0px;
@@ -738,11 +758,13 @@ button[type="submit"]:hover {
 .footer {
     background-color: #1f1f1f; /* Color de fondo del footer */
     color: #dce0e6; /* Color del texto */
-    padding: 20px;
+    padding: 2%;
     text-align: center;
 }
 
 .contact-info {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     margin: 0 auto; /* Centra el contenido */
@@ -750,9 +772,9 @@ button[type="submit"]:hover {
 }
 
 .contact-info p {
-    font-size: 1.5vw;
+    font-size: medium;
     margin-bottom: 5px;
-    margin-left: 30px;
+    margin-left: 10%;
 }
 
 .social-icons a {
