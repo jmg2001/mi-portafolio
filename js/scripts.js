@@ -1,13 +1,39 @@
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 3,
+    mousewheel:true,
+    coverflowEffect: {
+        infinite:false,
+        rotate:15,
+        strech:0,
+        depth:200,
+        modifier:1,
+        slideShadow:true,
+    },
+
+});
+
 /*------------------ Funcion para filtrar los proyectos -----------------*/
 function filterProjects(category) {
-    const projects = document.querySelectorAll('.project');
+    const projects = document.querySelectorAll('.projects');
     projects.forEach(project => {
         if (category === 'all' || project.classList.contains(category)) {
+            if (!project.classList.contains("swiper-slide")){
+                project.classList.add("swiper-slide")
+            }
             project.style.display = 'block';
         } else {
+            if (project.classList.contains("swiper-slide")){
+                project.classList.remove("swiper-slide")
+            }
             project.style.display = 'none';
         }
+        swiper.updateSlides();
     });
+    swiper.update();
+    
 }   
 
 /*------------------ Ocultamos el contenido si no se esta viendo -----------------*/
@@ -170,3 +196,10 @@ window.addEventListener('load', function() {
     }
 });
 
+/*------------------ Activar el popup de los proyectos -----------------*/
+function togglePopup(id) {
+    var slide = document.getElementById(id);
+    var popup = slide.querySelector(".popup");
+    popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+  
