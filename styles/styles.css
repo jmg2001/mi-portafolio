@@ -507,7 +507,21 @@ h1:hover, h2:hover, h3:hover {
 
 #projects {
     padding: 3%;
-    height: 100vh;
+    height: 60vw;
+}
+
+/* Media query para dispositivos de pantalla más pequeña */
+@media screen and (max-width: 768px) {
+    #projects {
+        height: 75vw; /* Cambiar el ancho de las columnas al 50% en dispositivos más pequeños */
+    }
+}
+
+/* Media query para dispositivos de pantalla aún más pequeña */
+@media screen and (max-width: 480px) {
+    #projects {
+        height: 90vw; /* Cambiar el ancho de las columnas al 100% en dispositivos muy pequeños para que se muestren una debajo de la otra */
+    }
 }
 
 #projects .title-container {
@@ -525,26 +539,6 @@ h1:hover, h2:hover, h3:hover {
 
 #projects-title h1:hover {
     color: #ffffff;
-}
-
-.projects-column {
-    margin-top: 70px;
-    height: 50vh;
-}
-
-/* Media query para dispositivos de pantalla más pequeña */
-@media screen and (max-width: 768px) {
-    #projects-title {
-        right: 0px;
-        height: 10vh; /* Cambiar el ancho de las columnas al 50% en dispositivos más pequeños */
-    }
-}
-
-/* Media query para dispositivos de pantalla aún más pequeña */
-@media screen and (max-width: 480px) {
-    #projects-title {
-        height: 10vh; /* Cambiar el ancho de las columnas al 100% en dispositivos muy pequeños para que se muestren una debajo de la otra */
-    }
 }
 
 #projects .content.show {
@@ -652,7 +646,7 @@ h1:hover, h2:hover, h3:hover {
     background-color: #dce0e6;
     padding: 0;
     border-radius: 5px;
-    font-size: x-large;
+    font-size: 1.5vw;
     text-align: center;
     justify-content: center;
 }
@@ -680,7 +674,7 @@ h1:hover, h2:hover, h3:hover {
 
 .popup {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -689,6 +683,18 @@ h1:hover, h2:hover, h3:hover {
     color: white;
     border-radius: 10px;
     z-index: 2;
+    max-width: 80%;
+    max-height: 70%;
+}
+
+.popup h2 {
+    font-family: 'myfont','Courier New', Courier, monospace;
+    font-size: 1.5vw;
+
+}
+
+.popup p {
+    font-size: 1.5vw;
 }
 
 .popup-content {
@@ -697,9 +703,10 @@ h1:hover, h2:hover, h3:hover {
 
 .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 1%;
+    right: 10%;
     cursor: pointer;
+
 }
   
 
