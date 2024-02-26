@@ -640,7 +640,7 @@ h1:hover, h2:hover, h3:hover {
 
 #contact {
     padding: 2%;
-    height: 95vh;
+    height: 88vh;
 }
 
 #contact .content {
@@ -651,6 +651,14 @@ h1:hover, h2:hover, h3:hover {
 #contact h1 {
     color: #285eac;
     font-size: 6vw;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+}
+
+#contact h3 {
+    color: #285eac;
+    font-size: 1.5vw;
+    font-family: 'myfont2','Courier New', Courier, monospace;
     text-align: center;
     margin: 0px 0px 20px 0px;
 }
@@ -727,5 +735,32 @@ button[type="submit"]:hover {
 
 /*-------------------------------- DIVISION ------------------------------*/
 
+.footer {
+    background-color: #1f1f1f; /* Color de fondo del footer */
+    color: #dce0e6; /* Color del texto */
+    padding: 20px;
+    text-align: center;
+}
 
+.contact-info {
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto; /* Centra el contenido */
+    display: flex;
+}
 
+.contact-info p {
+    font-size: 1.5vw;
+    margin-bottom: 5px;
+    margin-left: 30px;
+}
+
+.social-icons a {
+    color: #dce0e6; /* Color de los iconos */
+    font-size: 24px; /* Tamaño de los iconos */
+    margin-right: 10px; /* Espacio entre los iconos */
+}
+
+.social-icons a:hover {
+    color: #3474c7; /* Cambio de color al pasar el mouse */
+}
