@@ -660,15 +660,15 @@ h1:hover, h2:hover, h3:hover {
 
 .swiper-slide .button {
     font-family: 'myfont2','Courier New', Courier, monospace;
-    font-size: medium;
-    background-color: #3474c7;
-    color: #ffffff;
+    font-size: small;
+    background-color: #ffffff;
+    color: #285eac;
     position: absolute;
     left: 40%;
     bottom: 5%;
     z-index: 1;
     padding: 2%;
-    border-radius: 20%;
+    border-radius: 15%;
     font-weight: 1;
 }
 
@@ -685,6 +685,7 @@ h1:hover, h2:hover, h3:hover {
     z-index: 2;
     max-width: 80%;
     max-height: 70%;
+    width: 100%;
 }
 
 .popup h2 {
