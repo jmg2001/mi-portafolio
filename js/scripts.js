@@ -10,9 +10,8 @@ var swiper = new Swiper(".mySwiper", {
         strech:0,
         depth:200,
         modifier:1,
-        slideShadows:false,
+        slideShadows:true,
     },
-
 });
 
 /*------------------ Funcion para filtrar los proyectos -----------------*/

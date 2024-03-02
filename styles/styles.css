@@ -798,10 +798,12 @@ h1:hover, h2:hover, h3:hover {
     padding: 0px;
     border: none;
     border-radius: 5px;
+    padding-left: 1%;
 }
 
 .form-group textarea {
-height: 100px;
+    height: 100px;
+    padding-top: 1%;
 }
 
 button[type="submit"] {
