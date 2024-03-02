@@ -291,6 +291,12 @@ h1:hover, h2:hover, h3:hover {
 .profile-picture img {
     border-radius: 50%;
     max-width: 30vw;
+    transition: all 0.3s ease;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);;
+}
+
+.profile-picture img:hover{
+    transform: scale(1.05);
 }
 
 .bio {
