@@ -290,7 +290,7 @@ h1:hover, h2:hover, h3:hover {
 
 .profile-picture img {
     border-radius: 50%;
-    max-width: 30vw;
+    max-width: 15vw;
     transition: all 0.3s ease;
     box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);;
 }
@@ -598,7 +598,7 @@ h1:hover, h2:hover, h3:hover {
     color: #ffffff;
     background-color:#2b4c7e;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5%;
 }
 
 .projects a.button {
@@ -680,30 +680,38 @@ h1:hover, h2:hover, h3:hover {
     font-weight: 1;
 }
 
+.swiper-slide .button:hover {
+    background-color: #dce0e6;
+}
+
 .popup {
     display: none;
     position: absolute;
-    top: 50%;
+    top: 5%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
+    transform: translate(-50%, 0%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 5%;
     color: white;
     border-radius: 10px;
     z-index: 2;
     max-width: 80%;
-    max-height: 70%;
     width: 100%;
 }
 
 .popup h2 {
     font-family: 'myfont','Courier New', Courier, monospace;
     font-size: 1.5vw;
-
+    transition: none;
+    transform: none;
 }
 
 .popup p {
-    font-size: 0.9rem;
+    font-size: 1.5vw;
+}
+
+.popup a {
+    color: #f1f1f1;
 }
 
 .popup-content {
