@@ -199,6 +199,10 @@ window.addEventListener('load', function() {
 function togglePopup(id) {
     var slide = document.getElementById(id);
     var popup = slide.querySelector(".popup");
-    popup.style.display = popup.style.display === "none" ? "block" : "none";
+    if (popup.style.display = popup.style.display != ""){
+        popup.style.display = popup.style.display == "none" ? "block" : "none";
+    }else{
+        popup.style.display = "block"
+    }
 }
   

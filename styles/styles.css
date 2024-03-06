@@ -684,6 +684,10 @@ h1:hover, h2:hover, h3:hover {
     background-color: #dce0e6;
 }
 
+#popup {
+    display: none;
+}
+
 .popup {
     display: none;
     position: absolute;
