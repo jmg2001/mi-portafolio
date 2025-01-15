@@ -368,7 +368,7 @@ h1:hover, h2:hover, h3:hover {
 /* Estilo para la sección del CV */
 #cv {
     padding: 2%; /* Espaciado interno */
-    height: 150vh;    
+    height: 170vh;    
 }
 
 /* Media query para dispositivos de pantalla más pequeña */
@@ -445,7 +445,7 @@ h1:hover, h2:hover, h3:hover {
 
 #cv .button {
     height: 20px;
-    margin: 100px auto 0; /* Centrar horizontalmente */
+    margin: 200px auto 0; /* Centrar horizontalmente */
     background-color: #3474c7; /* Color de fondo del botón */
     color: #fff; /* Color del texto del botón */
     padding: 10px 20px; /* Espaciado interno del botón */
